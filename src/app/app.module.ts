@@ -13,7 +13,7 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { HomeModule } from './features';
+import { HomeModule, NoContentModule } from './features';
 
 import './rxjs-operators';
 import '../styles/main.scss';
@@ -44,7 +44,8 @@ const APP_PROVIDERS = [
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
     }),
-    HomeModule
+    HomeModule,
+    NoContentModule
   ],
   providers: [
     environment.ENV_PROVIDERS,
