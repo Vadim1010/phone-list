@@ -1,1 +1,7 @@
 @import '~styles/main';
+
+.no-content {
+  &__content {
+    text-align: center;
+  }
+}
