@@ -270,7 +270,7 @@ module.exports = function (options) {
        * You can also enable it to other attribute by settings "=attName": true.
        *
        * The configuration supplied is map between a location (key) and an element definition object (value)
-       * The location (key) is then exported to the template under then htmlElements property in webpack configuration.
+       * The location (key) is then exported to the home under then htmlElements property in webpack configuration.
        *
        * Example:
        *  Adding this plugin configuration
@@ -278,7 +278,7 @@ module.exports = function (options) {
        *    headTags: { ... }
        *  })
        *
-       *  Means we can use it in the template like this:
+       *  Means we can use it in the home like this:
        *  <%= webpackConfig.htmlElements.headTags %>
        *
        * Dependencies: HtmlWebpackPlugin

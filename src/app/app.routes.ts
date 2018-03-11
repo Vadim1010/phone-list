@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { NoContentComponent, HomeRoutes } from './features';
+import { HomeRoutes } from './features';
 
 export const ROUTES: Routes = [
+  ...HomeRoutes
 ];

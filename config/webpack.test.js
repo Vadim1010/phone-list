@@ -112,7 +112,7 @@ module.exports = function (options) {
                 }
               },
             },
-            'angular2-template-loader'
+            'angular2-home-loader'
           ],
           exclude: [/\.e2e\.ts$/]
         },
