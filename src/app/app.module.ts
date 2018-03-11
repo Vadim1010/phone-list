@@ -18,6 +18,7 @@ import { HomeModule, NoContentModule } from './features';
 import './rxjs-operators';
 import '../styles/main.scss';
 import '../styles/headings.css';
+import { HttpPhoneInterceptor } from './core';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -49,7 +50,12 @@ const APP_PROVIDERS = [
   ],
   providers: [
     environment.ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpPhoneInterceptor,
+      multi: true
+    },
   ]
 })
 export class AppModule {
