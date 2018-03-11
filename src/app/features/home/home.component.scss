@@ -1,1 +1,15 @@
 @import '~styles/main';
+
+.home {
+  &__phone-list {
+    .phone-list {
+      &__header {
+        font-weight: bold;
+        font-size: 20px;
+        th {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,2 +1,17 @@
-<h2>home</h2>
-
+<div class="home">
+  <table class="table table-bordered home__phone-list">
+    <tr class="phone-list__header">
+      <th>#</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Img</th>
+    </tr>
+    <tr class="phone-list__item item"
+        *ngFor="let item of phoneList$ | async; let i = index">
+      <th class="item__iterator">{{i +1}})</th>
+      <th class="item__name">{{item.name}}</th>
+      <th class="item__phone">{{item.phone}}</th>
+      <th class="item__img"><img src="{{item.img}}" alt="{{item.name}}"></th>
+    </tr>
+  </table>
+</div>
