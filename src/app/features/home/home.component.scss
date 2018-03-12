@@ -8,6 +8,14 @@
         font-size: 20px;
         th {
           text-align: center;
+
+        }
+      }
+      &__item {
+        .item {
+          &__img {
+            text-align: center;
+          }
         }
       }
     }

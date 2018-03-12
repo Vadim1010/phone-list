@@ -46,6 +46,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     );
   }
 
+  public changeItem(id: number): void {
+    this.subscriptions.push(this.http.put(`${this.URL}/${id}`, {})
+      .subscribe(() => {
+        this.getPhoneList();
+      })
+    );
+  }
+
   private getPhoneList(): void {
     this.phoneList$ = this.http.get<Phone[]>(this.URL);
   }

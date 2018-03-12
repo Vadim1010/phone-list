@@ -10,9 +10,10 @@
       <th>Name</th>
       <th>Phone</th>
       <th>Img</th>
+      <th>Menu</th>
     </tr>
-    <tr class="phone-list__item item"
-        *ngFor="let item of phoneList$ | async; let i = index">
+    <tbody *ngFor="let item of phoneList$ | async; let i = index">
+    <tr class="phone-list__item item">
       <td class="item__iterator">{{i +1}})</td>
       <td class="item__name">{{item.name}}</td>
       <td class="item__phone">{{item.phone}}</td>
@@ -22,7 +23,12 @@
                 class="btn btn-danger"
                 (click)="deleteItem(item.id)">Delete
         </button>
+        <button type="button"
+                class="btn btn-success"
+                (click)="changeItem(item.id)">Change
+        </button>
       </td>
     </tr>
+    </tbody>
   </table>
 </div>
