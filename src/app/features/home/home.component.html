@@ -17,6 +17,12 @@
       <td class="item__name">{{item.name}}</td>
       <td class="item__phone">{{item.phone}}</td>
       <td class="item__img"><img src="{{item.img}}" alt="{{item.name}}"></td>
+      <td class="item__btn">
+        <button type="button"
+                class="btn btn-danger"
+                (click)="deleteItem(item.id)">Delete
+        </button>
+      </td>
     </tr>
   </table>
 </div>
