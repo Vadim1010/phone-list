@@ -1,4 +1,9 @@
 <div class="home">
+  <div class="home__create-phone-number">
+    <tl-create-phone-number
+      (submitHandler)="addPhoneNumber($event)">
+    </tl-create-phone-number>
+  </div>
   <table class="table table-bordered home__phone-list">
     <tr class="phone-list__header">
       <th>#</th>

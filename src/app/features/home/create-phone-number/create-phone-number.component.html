@@ -1,0 +1,22 @@
+<div class="create-phone-number form-group">
+    <label class="create-phone-number__name">
+      Name:
+      <input type="text"
+             class=" form-control"
+             [(ngModel)]="newPhone.name">
+    </label>
+    <label class="create-phone-number__prone">
+      Phone:
+      <input type="text"
+             class=" form-control"
+             [(ngModel)]="newPhone.phone">
+    </label>
+    <label class="create-phone-number__icon">
+      Url Icon:
+      <input type="text"
+             class=" form-control"
+             [(ngModel)]="newPhone.img">
+    </label>
+    <button  class="create-phone-number__submit btn btn-default"
+             (click)="onSubmit($event)">Create new phone</button>
+</div>
