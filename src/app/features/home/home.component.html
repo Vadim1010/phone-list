@@ -13,10 +13,10 @@
     </tr>
     <tr class="phone-list__item item"
         *ngFor="let item of phoneList$ | async; let i = index">
-      <th class="item__iterator">{{i +1}})</th>
-      <th class="item__name">{{item.name}}</th>
-      <th class="item__phone">{{item.phone}}</th>
-      <th class="item__img"><img src="{{item.img}}" alt="{{item.name}}"></th>
+      <td class="item__iterator">{{i +1}})</td>
+      <td class="item__name">{{item.name}}</td>
+      <td class="item__phone">{{item.phone}}</td>
+      <td class="item__img"><img src="{{item.img}}" alt="{{item.name}}"></td>
     </tr>
   </table>
 </div>
