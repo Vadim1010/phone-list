@@ -11,6 +11,7 @@ import { Phone } from './phone.model';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   public phoneList$: Observable<Phone[]>;
+  public chang: number = 0;
 
   private URL: string = 'telephones';
   private subscriptions: Subscription[] = [];
@@ -46,12 +47,21 @@ export class HomeComponent implements OnInit, OnDestroy {
     );
   }
 
-  public changeItem(id: number): void {
-    this.subscriptions.push(this.http.put(`${this.URL}/${id}`, {})
+  public changItem(id: number, item: Phone): void {
+    this.subscriptions.push(this.http.put(`${this.URL}/${id}`, item)
       .subscribe(() => {
         this.getPhoneList();
+        this.chang = 0;
       })
     );
+  }
+
+  public changShow(id: number = 0): void {
+    if (id === this.chang) {
+      id = 0;
+    }
+
+    this.chang = id;
   }
 
   private getPhoneList(): void {

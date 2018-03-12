@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { PHONE_DEFAULT } from './create-phone-number.config';
 import { Phone } from '../phone.model';
 
@@ -7,16 +7,12 @@ import { Phone } from '../phone.model';
   templateUrl: './create-phone-number.component.html',
   styleUrls: ['./create-phone-number.component.scss']
 })
-export class CreatePhoneNumberComponent implements OnInit {
-  public newPhone: Phone;
-
+export class CreatePhoneNumberComponent {
+  @Input() public btnName: string = 'Create new phone';
+  @Input()public newPhone: Phone = Object.assign({}, PHONE_DEFAULT);
   @Output() private submitHandler: EventEmitter<Phone> = new EventEmitter<Phone>();
 
   constructor() {
-  }
-
-  public ngOnInit(): void {
-    this.resetValue();
   }
 
   public onSubmit(): void {
