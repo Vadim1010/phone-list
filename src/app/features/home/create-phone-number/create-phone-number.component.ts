@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { PHONE_DEFAULT } from './create-phone-number.config';
+import { Phone } from '../phone.model';
 
 @Component({
   selector: 'tl-create-phone-number',
@@ -7,9 +8,9 @@ import { PHONE_DEFAULT } from './create-phone-number.config';
   styleUrls: ['./create-phone-number.component.scss']
 })
 export class CreatePhoneNumberComponent {
-  public newPhone: any = PHONE_DEFAULT;
+  public newPhone: Phone = PHONE_DEFAULT;
 
-  @Output() private submitHandler: EventEmitter<any> = new EventEmitter<any>();
+  @Output() private submitHandler: EventEmitter<Phone> = new EventEmitter<Phone>();
 
   constructor() {
   }
